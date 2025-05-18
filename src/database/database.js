@@ -10,17 +10,8 @@ const uri = `mongodb+srv://${username}:${password}@mongodbform.tyffpkj.mongodb.n
 
 const client = new MongoClient(uri);
 
-async function run() {
-    try {
-        client.connect();
-        const database = client.db(process.env.DB_NAME).collection('user');
-        // console.log(database);
-        console.log("Pinged your deployment. You successfully connected to MongoDB!");
+// Db Prefixer
+const dbPrefixer = client.db(process.env.DB_NAME);
 
-    } catch (error) {
-        console.dir
-    }
-}
-
-export default run;
+export default dbPrefixer;
 

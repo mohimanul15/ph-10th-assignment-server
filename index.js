@@ -3,8 +3,7 @@ import express from 'express'
 
 import cors from 'cors'
 import Routes from './src/routes/routes.js';
-import run from './src/database/database.js';
-
+// import run from './src/database/database.js';
 
 // const val & declaretion
 dotenv.config();
@@ -18,8 +17,7 @@ app.use(express.json())
 app.use(Routes)
 
 // database
-
-run();
+// run();
 
 // Start the application 
 
